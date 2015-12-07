@@ -19,3 +19,6 @@ Here's how to include a source file
 
 <%= render_code("bash-script.sh", "bash") %>
 
+For a long file, include only part of it with
+
+<%= render_code("bash-script.sh", "bash", {:range => [1,2]}) %>

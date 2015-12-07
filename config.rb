@@ -62,6 +62,7 @@ mime_type('.rb', 'text/plain')
 
 caching_policy 'text/html', s_maxage: 60, max_age: 60, must_revalidate: true, proxy_revalidate:true
 
+activate :syntax
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true,
                :autolink => true, 
