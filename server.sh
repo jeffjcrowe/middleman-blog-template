@@ -6,4 +6,4 @@ if which docker-machine &>/dev/null; then
   echo "Your site will actually be available at http://$(docker-machine ip default):4567"
 fi
 
-./run-in-docker.sh "middleman server"
+./run-in-docker.sh "middleman --force-polling --verbose"
