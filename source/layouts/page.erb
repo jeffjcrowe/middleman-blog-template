@@ -1,0 +1,12 @@
+<% wrap_layout :default do %>
+
+<article class="page">
+  <h1><%= current_page.data.title %></h1>
+
+  <div class="entry">
+    <%= yield %>
+  </div>
+
+</article>
+
+<% end %>

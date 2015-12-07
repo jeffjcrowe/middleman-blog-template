@@ -1,0 +1,21 @@
+---
+title: "Example Title"
+tags: example
+---
+
+This is an example. Here is how to embed inline bash
+
+``` bash
+echo hello world
+```
+
+ENDOFSUMMARY
+
+^ that tag marks the end of the summary that will be shown on the main page.
+
+## Include Source
+
+Here's how to include a source file
+
+<%= render_code("bash-script.sh", "bash") %>
+

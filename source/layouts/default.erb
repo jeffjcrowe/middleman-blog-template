@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= current_page.data.title %></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <%= stylesheet_link_tag "all" %>
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/"><%= settings.site[:name] %></a></h1>
+            <p class="site-description"><%= settings.site[:desc] %></p>
+          </div>
+
+          <nav>
+            <!-- <%= link_to 'Blog', '/blog.html' %> -->
+            <%= link_to 'About', '/about.html' %>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <%= yield %>
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+        </footer>
+      </div>
+    </div>
+    
+	<%= javascript_include_tag  "all" %>
+  </body>
+</html>
+

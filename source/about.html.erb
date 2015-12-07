@@ -1,0 +1,41 @@
+---
+title: About
+layout: page
+---
+
+<p>
+You can edit about.html.erb to add some content here
+</p>
+
+<h4>Contact:</h4>
+
+<ul class="contact-list">
+
+<% if settings.site.has_key?(:email) %>
+	<li>
+		<a href="mailto:<%= settings.site[:email] %>">
+			<i class="svg-icon email"></i>
+			<span><%= settings.site[:email] %></span>
+		</a>
+	</li>
+<% end %>
+
+<% if settings.site.has_key?(:linkedin) %>
+	<li>
+		<a href="https://www.linkedin.com/in/<%= settings.site[:linkedin] %>">
+			<i class="svg-icon linkedin"></i>
+			<span><%= settings.site[:linkedin] %></span>
+		</a>
+	</li>
+<% end %>
+
+<% if settings.site.has_key?(:github) %>
+	<li>
+		<a href="mailto:<%= settings.site[:github] %>">
+			<i class="svg-icon github"></i>
+			<span><%= settings.site[:github] %></span>
+		</a>
+	</li>
+<% end %>
+
+</ul>

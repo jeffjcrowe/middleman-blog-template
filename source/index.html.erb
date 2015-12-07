@@ -1,0 +1,22 @@
+---
+title: Blog
+layout: default
+---
+
+<div class="posts">
+  <% blog.articles.each do |article| %>
+    <article class="post">
+
+    <h1>
+      <a href="<%= article.url %>"><%= article.title %></a>
+      <time class="date"><%= article.date.strftime('%b %e, %Y') %></time>
+    </h1>
+
+      <div class="entry">
+        <%= article.summary %>
+      </div>
+
+      <a href="<%= article.url %>" class="read-more">Read More</a>
+    </article>
+  <% end %>
+</div>
